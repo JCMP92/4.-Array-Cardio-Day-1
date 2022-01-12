@@ -81,7 +81,8 @@
       const vehicle = data.reduce(function (obj, item) {
         if(!obj[item]){
           obj[item]=0;
-        }
+        }//If the item doesn't exist in obj, first we create it and assign it a value of 0 inside obj. The the next piece of code increments that value.
+        //If the item already exist in obj, this piece of code will be ignored.
         obj[item]++;
         return obj;
       }, {});
