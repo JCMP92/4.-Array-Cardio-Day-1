@@ -68,7 +68,12 @@
   
       // 7. sort Exercise
       // Sort the people alphabetically by last name
-      
+      const fullName = people.sort((lastName, firstName) => {
+        const [aLast, aFirst] = lastName.split(', ');
+        const [bLast, bFirst] = firstName.split(', ');
+        return aLast > bLast ? 1 : -1; // a comparison using a TERNARY OPERATOR.
+      });
+      console.table(fullName);
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
